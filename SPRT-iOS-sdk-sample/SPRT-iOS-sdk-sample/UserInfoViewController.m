@@ -30,16 +30,17 @@
 
 
 - (IBAction)doneClicked:(id)sender {
+    NSLog(@"%@", self.emailTextField.text);
     if(self.emailTextField.text.length > 0)
         [[SupportcomCloudSDK sharedInstance] setEmail:self.emailTextField.text];
     if(self.firstNameTextField.text.length > 0)
-        [[SupportcomCloudSDK sharedInstance] setEmail:self.firstNameTextField.text];
+        [[SupportcomCloudSDK sharedInstance] setFirstName:self.firstNameTextField.text];
     if(self.lastNameTextField.text.length > 0)
-        [[SupportcomCloudSDK sharedInstance] setEmail:self.lastNameTextField.text];
+        [[SupportcomCloudSDK sharedInstance] setLastName:self.lastNameTextField.text];
     if(self.phoneTextField.text.length > 0)
-        [[SupportcomCloudSDK sharedInstance] setEmail:self.phoneTextField.text];
+        [[SupportcomCloudSDK sharedInstance] setPhone:self.phoneTextField.text];
     if(self.externalTextField.text.length > 0)
-        [[SupportcomCloudSDK sharedInstance] setEmail:self.externalTextField.text];
+        [[SupportcomCloudSDK sharedInstance] setExternalId:self.externalTextField.text];
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
